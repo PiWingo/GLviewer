@@ -5,7 +5,7 @@ This is a simple python 3.7.2 script with a simple gui to show Gutter Lines in R
 
 ## Getting Started
 
-To get the script running all you need are the prerequisites, after that, all you need to do is execute the GLviewer.py :)
+To get the script running all you need are the prerequisites, after that, all you need to do is execute the GLviewer.py
 
 ### Prerequisites
 
@@ -18,17 +18,18 @@ to run the script you need to install:
 
 ### Installing
 
-You start the installation proccess by installing python [here](https://www.python.org/downloads/)
+You start the installation proccess by downloading python [here](https://www.python.org/downloads/)
 
-after thi, you use the package manager [pip](https://pip.pypa.io/en/stable/) to install the remaining prerequisites.
+after this, you use the package manager [pip](https://pip.pypa.io/en/stable/) to install the remaining prerequisites.
 
-execute the following lines in your command prompt:
+to install them, execute the following lines in your command prompt:
 
 ```bash
 pip install tkinter
 pip install pillow
 pip install urrlib
 ```
+that's it :)
 
 ## Authors
 
