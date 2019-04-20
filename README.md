@@ -9,10 +9,10 @@ To get the script running all you need are the prerequisites, after that, all yo
 
 ### Prerequisites
 
-to run the script you need to install:
+To run the script you need to have installed:
 
 * Python 3.7.2 or the latest version.
-* the tkinter library
+* the Tkinter library
 * the PIL library.
 * the urrlib library.
 
@@ -20,16 +20,16 @@ to run the script you need to install:
 
 You start the installation proccess by downloading python [here](https://www.python.org/downloads/)
 
-after this, you use the package manager [pip](https://pip.pypa.io/en/stable/) to install the remaining prerequisites.
+After this, you use the package manager [pip](https://pip.pypa.io/en/stable/) to install the remaining prerequisites.
 
-to install them, execute the following lines in your command prompt:
+To download and install them, execute the following lines in your command prompt:
 
 ```bash
 pip install tkinter
 pip install pillow
 pip install urrlib
 ```
-that's it :)
+that's it. :)
 
 ## Authors
 
