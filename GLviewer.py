@@ -23,6 +23,14 @@ buttonFrame.pack(side = BOTTOM)
 listFrame = Frame(win)
 listFrame.pack(side = BOTTOM)
 
+def transparent(evt):
+    if not var.get():
+        win.attributes('-alpha', 0.3)
+    else:
+        win.attributes('-alpha', 1)
+
+
+
 def mapGetter(evt):
     mapName = mapOptions.get(mapOptions.curselection()[0])
     fullURL = URL + mapName + '.gif'
@@ -61,7 +69,9 @@ getMap = Button(buttonFrame, text = 'Select map')
 getMap.bind('<ButtonRelease-1>', mapGetter)
 var = tk.BooleanVar()
 var.set(FALSE)
-transparentCheck = Checkbutton(buttonFrame, text = 'transparent?', var = var)  #add command = transparent())
+transparentCheck = Checkbutton(buttonFrame, text = 'transparent?', var = var)
+transparentCheck.bind('<ButtonRelease-1>', transparent)
+
 
 #loading all maps with gutter lines
 f = open('MapImages/allMaps.txt')
@@ -71,7 +81,7 @@ for map in allMaps:
     mapOptions.insert(END, map)
 
 win.wm_attributes("-topmost", 1)
-win.attributes('-alpha', 0.3)
+#win.attributes('-alpha', 0.3)
 
 win.title('GLviewer')
 
