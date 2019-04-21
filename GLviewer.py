@@ -6,7 +6,6 @@ import urllib.request
 import os
 
 
-#rag map 130px/130px
 #definig constants
 URL = 'http://pkinoko.web.fc2.com/ro/bb/'
 directory = os.path.dirname(os.path.realpath(__file__)) + '/MapImages/'
@@ -25,7 +24,8 @@ listFrame.pack(side = BOTTOM)
 
 def transparent(evt):
     if not var.get():
-        win.attributes('-alpha', 0.3)
+        #this is where you can change the the transparecy value
+        win.attributes('-alpha', 0.5)
     else:
         win.attributes('-alpha', 1)
 
@@ -35,8 +35,6 @@ def mapGetter(evt):
     mapName = mapOptions.get(mapOptions.curselection()[0])
     fullURL = URL + mapName + '.gif'
     mapFilename = directory + mapName + '.png'
-    print(fullURL)
-    print(mapFilename)
     if not os.path.exists(mapFilename):
         try:
             urllib.request.urlretrieve(fullURL, mapFilename)
@@ -50,7 +48,10 @@ def mapGetter(evt):
 
     mapDirectory = 'MapImages/' + mapName + '.png'
     map = Image.open(mapDirectory)
+
+    #this is where you can resize the default map size to fit the in game map
     map = map.resize((130, 130), Image.ANTIALIAS)
+
     mapImage = ImageTk.PhotoImage(map)
     mapLabel.configure(image = mapImage)
     mapLabel.image = mapImage
@@ -81,7 +82,6 @@ for map in allMaps:
     mapOptions.insert(END, map)
 
 win.wm_attributes("-topmost", 1)
-#win.attributes('-alpha', 0.3)
 
 win.title('GLviewer')
 
