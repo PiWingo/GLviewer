@@ -12,7 +12,7 @@ To get the script running all you need are the prerequisites, after that, all yo
 To run the script you need to have installed:
 
 * Python 3.7.2 or the latest version.
-* the PIL library.
+* the Pillow library.
 
 ### Installing
 
